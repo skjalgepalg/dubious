@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "react-app"
+  ],
+  "plugins": [
+    "compat"
+  ],
+  "env": {
+    "browser" : true
+  },
+  "globals": {
+    "__DEV__"      : false,
+    "__TEST__"     : false,
+    "__PROD__"     : false,
+    "__COVERAGE__" : false,
+    "__API_URL__"  : false,
+    "__BUILD_INFO__": false
+  },
+  "rules": {
+    "comma-dangle": ["error", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "always-multiline"
+    }],
+    "compat/compat"        : 2,
+    "jsx-quotes"           : [2, "prefer-single"],
+    "key-spacing"          : 0,
+    "max-len"              : [2, 120, 2],
+    "no-warning-comments"  : [2, { "terms": ["fixme"], "location": "anywhere" }],
+    "object-curly-spacing" : [2, "always"],
+    "react/jsx-closing-bracket-location": 2,
+    "space-before-function-paren": [2, {"anonymous": "always", "named": "never", "asyncArrow": "always"}]
+  }
+}
