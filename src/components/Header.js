@@ -9,7 +9,7 @@ const Header = () =>
         alt='Much img'
       />
     </figure>
-    <h1 className='App-title'>Various React practices</h1>
+    <h1 className='App-title'>Skjalg, sitter hos TFF, React 15...</h1>
   </header>
 
 export default Header
