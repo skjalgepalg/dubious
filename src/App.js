@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom'
 
 import './App.css'
-import logo from './logo.svg'
+import logo from './assets/capra-logo.svg'
 import Header from './components/Header'
 import Intro from './components/Intro'
 import SupremeHeader from './modules/recompose/SupremeHeader'
@@ -18,7 +18,7 @@ const Home = () =>
     <header className='App-header'>
       <img
         src={logo}
-        className='App-logo'
+        className='Capra-logo'
         alt='Wow such logo'
       />
       <h1 className='App-title'>Various React practices</h1>
