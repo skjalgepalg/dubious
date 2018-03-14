@@ -40,32 +40,6 @@ const Recompose = () =>
     <div className='App'>
       <SupremeHeader/>
     </div>
-    <pre>
-      {`melding: {
-        meldingId: 123,
-        vedlegg: [],
-      }`}
-    </pre>
-    <pre>
-      {`const Melding = ({ meldingId, ...props }) =>
-      <div>
-        {meldingId}
-        <Vedlegg vedlegg={props.vedlegg} />
-      <div>`}
-    </pre>
-    <pre>
-      {`class Melding extends React.Component {
-        render() {
-          const { meldingId, ...props } = this.props
-          return (
-            <div>
-              {meldingId}
-              Vedlegg vedlegg={props.vedlegg} />
-            </div>
-          )
-        }
-      }`}
-    </pre>
   </React.Fragment>
 
 const RenderProps = () =>
