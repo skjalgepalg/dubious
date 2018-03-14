@@ -5,13 +5,13 @@ import {
   Route,
   Link,
 } from 'react-router-dom'
-
-import './App.css'
 import logo from './assets/capra-logo.svg'
 import Header from './components/Header'
 import Intro from './components/Intro'
 import SupremeHeader from './modules/recompose/SupremeHeader'
 import GeoPosition from './modules/properties/GeoPosition'
+
+import './App.css'
 
 const Home = () =>
   <div className='App'>
