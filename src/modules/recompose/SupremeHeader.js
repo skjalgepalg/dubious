@@ -59,12 +59,18 @@ const SupremeHeader = ({
     </h1>
   </header>
 
+// const passthroughPropTypes = {
+//   snerk: PropTypes.string,
+// }
+
 SupremeHeader.propTypes = {
+  // ...passthroughPropTypes, <- kjempeproblem
   handleClick: PropTypes.func,
   isSupremeLeader: PropTypes.bool,
 }
 
 export default compose(
+  // setPropTypes(passthroughPropTypes)
   withState('isSupremeLeader', 'setIsSupremeLeader', false),
   withHandlers({
     handleClick: ({ isSupremeLeader, setIsSupremeLeader }) => e => {
