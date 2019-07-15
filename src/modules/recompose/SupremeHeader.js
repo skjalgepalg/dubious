@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes, { func, bool } from 'prop-types'
-import { withState, withHandlers, compose, withProps } from 'recompose'
+import { withState, withHandlers, compose, withProps, setPropTypes } from 'recompose'
 import onClickOutside from 'react-onclickoutside'
 
 const SUPREME_SOURCE = 'https://avatars2.githubusercontent.com/u/430645?s=400&v=4'
@@ -35,14 +35,16 @@ function NamedHeader({ handleClick, isSupremeLeader }) {
 }
 
 
-// Anonymous function (avoid, but oooh so ES6 and modern)
+// Anonymous function (unngå, men oooh so ES6 and modern)
 const SupremeHeader = ({
   handleClick,
   isSupremeLeader,
+  ...props
 }) =>
   <header className='App-header'>
     <figure>
       <img
+        {...props}
         src={isSupremeLeader ? SUPREME_SOURCE : PLAIN_SOURCE}
         className='App-logo'
         alt='supremeheader'
@@ -59,18 +61,18 @@ const SupremeHeader = ({
     </h1>
   </header>
 
-// const passthroughPropTypes = {
-//   snerk: PropTypes.string,
-// }
+const passthroughPropTypes = {
+  snerk: PropTypes.string,
+}
 
 SupremeHeader.propTypes = {
-  // ...passthroughPropTypes, <- kjempeproblem
+  // ...passthroughPropTypes, // <- kjempeproblem
   handleClick: PropTypes.func,
   isSupremeLeader: PropTypes.bool,
 }
 
 export default compose(
-  // setPropTypes(passthroughPropTypes)
+  setPropTypes(passthroughPropTypes),
   withState('isSupremeLeader', 'setIsSupremeLeader', false),
   withHandlers({
     handleClick: ({ isSupremeLeader, setIsSupremeLeader }) => e => {
@@ -87,3 +89,4 @@ export default compose(
   })),
   onClickOutside,
 )(SupremeHeader)
+// )(NamedHeader)

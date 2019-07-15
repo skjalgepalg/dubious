@@ -1,16 +1,16 @@
-// Structure imports -fight me!
+// Structure imports?
 import React from 'react'
 import {
   BrowserRouter as Router,
   Route,
   Link,
 } from 'react-router-dom'
-import logo from './assets/capra-logo.svg'
 import Header from './components/Header'
 import Intro from './components/Intro'
 import SupremeHeader from './modules/recompose/SupremeHeader'
 import GeoPosition from './modules/properties/GeoPosition'
 
+import logo from './assets/capra-logo.svg'
 import './App.css'
 
 const Home = () =>
@@ -25,7 +25,7 @@ const Home = () =>
     </header>
 
     <p className='App-intro'>
-      Tilgi oss, for vi vet ikke hva vi gjør
+      Wow such intro-text
     </p>
   </div>
 
